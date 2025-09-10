@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Car Accessories - Login/Register</title>
+  <link rel="stylesheet" href="loginRegister.css">
+  <script src="loginRegister.js"></script>
+
+</head>
+<body>
+  <div class="main">
+    <video src="car_video.mp4" autoplay muted loop></video>
+
+    <div class="main-child">
+      <div class="mc1">
+        <div class="toggle-buttons">
+          <button class="buttons active" onclick="showForm('login')">Login</button>
+          <button class="buttons" onclick="showForm('signup')">Sign Up</button>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-section active" id="login-form">
+          <label>Enter Your Mobile Number:</label><br>
+          <input type="text" class="input" id="loginNumber" maxlength="10"><br>
+          <label>Enter Your Password:</label><br>
+          <input type="password" class="input" id="loginPassword"><br>
+          <a href="forgotPassword.html">Forgot Your Password?</a><br>
+          <button class="login" onclick="loginChecker()">Login</button>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-section" id="signup-form">
+          <label>Full Name:</label><br>
+          <input type="text" class="input" id="name" required><br>
+          <label>Mobile Number:</label><br>
+          <input type="text" class="input" id="mobileNumber" oninput="mobileNumberValidator()" required maxlength="10"><br>
+          <label>Email Address:</label><br>
+          <input type="email" class="input" id="email" required oninput="mailValidator()"><br>
+          <label>Create Password:</label><br>
+          <input type="password" class="input" id="password" required><br>
+          <label>Confirm Password:</label><br>
+          <input type="password" class="input" id="confirmPassword" oninput="passwordCheck()" required><br>
+          <button class="signup" onclick="register()" id="register">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>

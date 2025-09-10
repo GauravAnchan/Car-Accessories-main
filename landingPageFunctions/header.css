@@ -1,0 +1,269 @@
+body {
+  margin: 0px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.MainHeader {
+  background-color: white;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.HeaderLogo {
+  height: auto;
+  width: min(60%, 280px);
+  object-fit: contain;
+  margin-left: 20px;
+}
+
+.HeaderButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.HomeButton {
+  padding: 12px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.HomeButton:hover {
+  text-decoration: underline;
+  background-color: #343a40;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.profileButton:hover {
+  background-color: white;
+}
+
+.cart-count {
+  position: absolute;
+  top: 8px;
+  right: 225px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+/*  */
+
+
+/* SubHeader Section */
+.MainSubHeader {
+  height: auto;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.SubHeaderContent {
+  max-width: 700px;
+  width: 100%;
+  animation: SubHeaderContent 1s ease-in-out;
+
+}
+
+.SubHeaderName {
+  font-size: clamp(28px, 5vw, 50px);
+  font-weight: bold;
+  margin: 0;
+}
+
+.SubHeaderSub {
+  font-size: clamp(12px, 2vw, 18px);
+  margin-top: 5px;
+  color: white;
+}
+
+@keyframes SubHeaderContent {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Login/Register Button */
+.loginRegisterButton {
+  height: 45px;
+  width: 130px;
+  font-size: 14px;
+  border-radius: 10px;
+  align-self: flex-end;
+}
+
+.loginRegisterButton:hover {
+  background-color: #343a40;
+  color: white;
+  border: 1px solid white;
+}
+
+.loginRegisterButton::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' class='bi bi-box-arrow-in-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z'/%3E%3Cpath fill-rule='evenodd' d='M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.loginRegisterButton:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' class='bi bi-box-arrow-in-right' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z'/%3E%3Cpath fill-rule='evenodd' d='M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z'/%3E%3C/svg%3E");
+}
+
+
+
+/* Auto Scroll Images */
+.auto-scroll-banner {
+  height: 700px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid #000;
+}
+
+.auto-scroll-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.auto-scroll-banner img.active {
+  opacity: 1;
+}
+
+/* Profile/Logout */
+.profileContainer {
+  position: relative;
+}
+
+.logoutDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Everything centered horizontally */
+  padding: 12px;
+  z-index: 100;
+  width: 180px; /* a bit wider for neatness */
+  text-align: center; /* ✅ Ensures text centers */
+}
+
+.profileIcon {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center; /* ✅ Centers the SVG inside */
+  width: 100%;
+}
+
+.userLabel {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 6px 0;
+  color: #333;
+}
+
+.logoutButton {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #dc3545;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100px; /* ✅ makes logout button uniform */
+  text-align: center;
+}
+
+.logoutButton:hover {
+  background: #c82333;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .MainHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .HeaderButtons {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .MainSubHeader{
+    height: 150px;
+  }
+
+  .loginRegisterButton {
+    /* width: 100%; */
+    font-size:14px;
+    /* margin: 10px 0; */
+    margin-bottom: -105px;
+    position: static;
+  }
+
+  .auto-scroll-banner {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .HeaderLogo {
+    width: 200px;
+  }
+
+  .HomeButton {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+
+  .loginRegisterButton {
+    font-size: 14px;
+  }
+
+  .SubHeaderName {
+    font-size: 24px;
+  }
+
+  .SubHeaderSub {
+    font-size: 12px;
+  }
+}
