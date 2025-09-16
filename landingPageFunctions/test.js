@@ -1417,7 +1417,8 @@ async function loadExistingBrands(props) {
 
     // ✅ LANDING PAGE VIEW
     else if (props === 'landingPage') {
-      const container = document.getElementById('brand_section'); // different container
+      const container = document.getElementById('elements_section'); // different container
+      console.log("error ")
       if (!container) return;
       container.innerHTML = '';
 
